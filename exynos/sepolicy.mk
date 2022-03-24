@@ -1,6 +1,6 @@
 #
 # This policy configuration will be used by all exynos products
-# that inherit from PixelExperience
+# that inherit from AOSQP
 #
 
 ifeq ($(TARGET_COPY_OUT_VENDOR), vendor)
@@ -10,14 +10,14 @@ endif
 endif
 
 BOARD_PLAT_PRIVATE_SEPOLICY_DIR += \
-    device/custom/sepolicy/exynos/private
+    device/aosqp/sepolicy/exynos/private
 
 ifeq ($(TARGET_USES_PREBUILT_VENDOR_SEPOLICY), true)
 BOARD_PLAT_PRIVATE_SEPOLICY_DIR += \
-    device/custom/sepolicy/exynos/dynamic \
-    device/custom/sepolicy/exynos/system
+    device/aosqp/sepolicy/exynos/dynamic \
+    device/aosqp/sepolicy/exynos/system
 else
 BOARD_SEPOLICY_DIRS += \
-    device/custom/sepolicy/exynos/dynamic \
-    device/custom/sepolicy/exynos/vendor
+    device/aosqp/sepolicy/exynos/dynamic \
+    device/aosqp/sepolicy/exynos/vendor
 endif
