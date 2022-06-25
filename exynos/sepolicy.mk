@@ -1,6 +1,6 @@
 #
 # This policy configuration will be used by all exynos products
-# that inherit from AOSQP
+# that inherit from QASSA
 #
 
 ifeq ($(TARGET_COPY_OUT_VENDOR), vendor)
@@ -10,14 +10,14 @@ endif
 endif
 
 BOARD_PLAT_PRIVATE_SEPOLICY_DIR += \
-    device/aosqp/sepolicy/exynos/private
+    device/qassa/sepolicy/exynos/private
 
 ifeq ($(TARGET_USES_PREBUILT_VENDOR_SEPOLICY), true)
 BOARD_PLAT_PRIVATE_SEPOLICY_DIR += \
-    device/aosqp/sepolicy/exynos/dynamic \
-    device/aosqp/sepolicy/exynos/system
+    device/qassa/sepolicy/exynos/dynamic \
+    device/qassa/sepolicy/exynos/system
 else
 BOARD_SEPOLICY_DIRS += \
-    device/aosqp/sepolicy/exynos/dynamic \
-    device/aosqp/sepolicy/exynos/vendor
+    device/qassa/sepolicy/exynos/dynamic \
+    device/qassa/sepolicy/exynos/vendor
 endif

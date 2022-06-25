@@ -1,6 +1,6 @@
 #
 # This policy configuration will be used by all products that
-# inherit from AOSQP
+# inherit from QASSA
 #
 
 ifeq ($(TARGET_COPY_OUT_VENDOR), vendor)
@@ -16,20 +16,20 @@ endif
 endif
 
 BOARD_PLAT_PUBLIC_SEPOLICY_DIR += \
-    device/aosqp/sepolicy/common/public
+    device/qassa/sepolicy/common/public
 
 BOARD_PLAT_PRIVATE_SEPOLICY_DIR += \
-    device/aosqp/sepolicy/common/private
+    device/qassa/sepolicy/common/private
 
 ifeq ($(TARGET_USES_PREBUILT_VENDOR_SEPOLICY), true)
 BOARD_PLAT_PRIVATE_SEPOLICY_DIR += \
-    device/aosqp/sepolicy/common/dynamic \
-    device/aosqp/sepolicy/common/system
+    device/qassa/sepolicy/common/dynamic \
+    device/qassa/sepolicy/common/system
 else
 BOARD_SEPOLICY_DIRS += \
-    device/aosqp/sepolicy/common/dynamic \
-    device/aosqp/sepolicy/common/vendor
+    device/qassa/sepolicy/common/dynamic \
+    device/qassa/sepolicy/common/vendor
 endif
 
 # Selectively include legacy rules defined by the products
--include device/aosqp/sepolicy/legacy-common/sepolicy.mk
+-include device/qassa/sepolicy/legacy-common/sepolicy.mk
